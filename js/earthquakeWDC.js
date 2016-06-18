@@ -27,7 +27,7 @@
         lat = 0,
         lon = 0;
 
-    $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function (resp) {
+    $.getJSON("http://cors.io/?u=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function (resp) {
         var feat = resp.features; 
 
         for (var i = 0, len = feat.length; i < len; i++) {
