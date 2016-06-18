@@ -27,7 +27,7 @@
         lat = 0,
         lon = 0;
 
-    $.getJSON("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function (resp) {
+    $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function (resp) {
         var feat = resp.features; 
 
         for (var i = 0, len = feat.length; i < len; i++) {
@@ -56,7 +56,7 @@
 	$(document).ready(function () {
     $("#submitButton").click(function () {
         tableau.connectionName = "USGS Earthquake Feed";
-        setTimeout(function(){tableau.submit()}, 3000);
+        tableau.submit();
     });
 });
 	
